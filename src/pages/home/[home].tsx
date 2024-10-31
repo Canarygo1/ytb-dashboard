@@ -10,7 +10,6 @@ import { getComments, Comment } from "../apiRequest";
 import {useRouter} from "next/router";
 
 function Video() {
-  const userId = localStorage.getItem('channelId');
 
   const router = useRouter();
   const { home } = router.query;
