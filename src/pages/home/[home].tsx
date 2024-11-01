@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { useQuery } from "@tanstack/react-query";
-import { getComments, Comment } from "../apiRequest";
+import { getComments, Comment } from "../../configs/apiRequest";
 import {useRouter} from "next/router";
 
 function Video() {

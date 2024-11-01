@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useQuery } from '@tanstack/react-query';
-import { getVideos, Video } from '../apiRequest';
+import { getVideos, Video } from '../../configs/apiRequest';
 import {Button} from "@mui/material";
 
 const Home = () => {
