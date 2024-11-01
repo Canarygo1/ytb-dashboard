@@ -46,6 +46,15 @@ export const getVideos = async (userId:string) => {
 
   return response.data as Video[]
 }
+//get Video by id
+export const getVideo = async (videoId:string): Promise<Video> => {
+  const response = await client
+    .from('video')
+    .select('*, comments(count)')
+    .eq('id', videoId).single();
+
+  return response.data as Video
+}
 export const getComments = async (videoId:string): Promise<Comment[]> => {
   console.log('videoId',videoId)
   const response = await client

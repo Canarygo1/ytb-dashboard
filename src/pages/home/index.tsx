@@ -32,8 +32,13 @@ const Home = () => {
       <Grid item xs={12}>
         <Grid container spacing={4} justifyContent="left">
           {videos?.map((video) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={video.id}>
-              <Card >
+            <Grid item xs={12} sm={6} md={4} lg={3} key={video.id }>
+              <Card sx={{
+                height: 400,
+                display:'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-around',
+              }}>
                 <CardMedia
                   component="img"
                   image={video.miniatura_url}
@@ -50,7 +55,7 @@ const Home = () => {
                   <Typography variant="subtitle1" align="center">
                     {video.name}
                   </Typography>
-                  <Button style={{
+                  <Button  fullWidth={true} style={{
                     marginTop: '10px',
                   }} variant={'contained'} href={`/home/${video.id}`}>Ver análisis</Button>
                 </CardContent>
