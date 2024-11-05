@@ -30,6 +30,7 @@ export interface Video{
   name:string;
   url:string;
   video_id:string;
+  channel?:Channel;
   channel_id:string;
   miniatura_url:string;
   created_at:string;
@@ -46,7 +47,6 @@ export const getVideos = async (userId:string) => {
 
   return response.data as Video[]
 }
-//get Video by id
 export const getVideo = async (videoId:string): Promise<Video> => {
   const response = await client
     .from('video')
@@ -64,3 +64,4 @@ export const getComments = async (videoId:string): Promise<Comment[]> => {
 
   return response.data as Comment[]
 }
+

@@ -84,7 +84,6 @@ function Video() {
       </Grid>
       <Grid item container xs={12} spacing={2} >
         <Grid item xs={12} md={4}>
-
           <Card>
             <CardMedia
               component="img"
@@ -92,7 +91,6 @@ function Video() {
               title={video!.name}
               sx={{height: 200, borderRadius: '12px'}}
             />
-
           </Card>
         </Grid>
         <Grid item xs={12} md={8}>
@@ -130,7 +128,6 @@ function Video() {
                   sx={{backgroundColor: selectedTag === null ? 'blue' : 'gray', color: 'white'}}
                 />
               </Stack>
-
             </CardContent>
           </Card>
         </Grid>
