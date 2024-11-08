@@ -24,7 +24,15 @@ export interface User{
   id: string; // character varying
   author_display_name: string; // text
 }
-
+export interface Conclusion{
+  id: string;
+  conclusions: string;
+  channel_improving: string;
+  video_id: string;
+  created_at: string;
+  future_collab: string;
+  tag:string
+}
 export interface Video{
   id: string;
   name:string;
@@ -46,6 +54,14 @@ export const getVideos = async (userId:string) => {
 
 
   return response.data as Video[]
+}
+export const getVideoConclusion = async (videoId:string): Promise<Conclusion[]> => {
+  const response = await client
+    .from('conclusion')
+    .select('*')
+    .eq('video_id', videoId)
+
+  return response.data as Conclusion[]
 }
 export const getVideo = async (videoId:string): Promise<Video> => {
   const response = await client
